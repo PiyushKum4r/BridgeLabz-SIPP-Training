@@ -1,0 +1,20 @@
+Class Pet
+    Attributes: name, age
+    Constructor(name, age)
+    Method: displayInfo()
+
+Class Dog extends Pet
+    Constructor(name, age)
+    Method: displayInfo() -> print "Dog details"
+
+Class Cat extends Pet
+    Constructor(name, age)
+    Method: displayInfo() -> print "Cat details"
+
+Class Bird extends Pet
+    Constructor(name, age)
+    Method: displayInfo() -> print "Bird details"
+
+Main
+    Create Dog, Cat, Bird objects
+    Call displayInfo() for each

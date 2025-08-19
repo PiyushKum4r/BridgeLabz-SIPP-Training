@@ -1,0 +1,35 @@
+ALGORITHM FoodDeliverySystem
+START
+    CLASS Customer
+        ATTRIBUTES: name, address
+        CONSTRUCTOR(name, address)
+    END CLASS
+
+    CLASS Restaurant
+        ATTRIBUTES: name, location
+        CONSTRUCTOR(name, location)
+    END CLASS
+
+    CLASS DeliveryBoy
+        ATTRIBUTES: name, vehicle
+        CONSTRUCTOR(name, vehicle)
+    END CLASS
+
+    CLASS Order
+        ATTRIBUTE: customer      // Customer object
+        ATTRIBUTE: restaurant    // Restaurant object
+        ATTRIBUTE: deliveryBoy   // DeliveryBoy object
+        ATTRIBUTE: orderDetails
+
+        CONSTRUCTOR(customer, restaurant, deliveryBoy, orderDetails)
+            SET this.customer = customer
+            SET this.restaurant = restaurant
+            SET this.deliveryBoy = deliveryBoy
+            SET this.orderDetails = orderDetails
+        END CONSTRUCTOR
+
+        METHOD displayOrder()
+            PRINT customer.name, restaurant.name, deliveryBoy.name, orderDetails
+        END METHOD
+    END CLASS
+END

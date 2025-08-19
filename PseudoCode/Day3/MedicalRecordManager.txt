@@ -1,0 +1,32 @@
+ALGORITHM MedicalRecordManager
+START
+    INTERFACE Searchable
+        METHOD search(query)
+    END INTERFACE
+
+    INTERFACE Printable
+        METHOD print()
+    END INTERFACE
+
+    CLASS LabReport IMPLEMENTS Searchable, Printable
+        ATTRIBUTE: reportID, testResults
+        CONSTRUCTOR(reportID, testResults)
+        METHOD search(query)
+            PRINT "Searching in LabReport: " + query
+        END METHOD
+        METHOD print()
+            PRINT "Printing LabReport: " + reportID
+        END METHOD
+    END CLASS
+
+    CLASS PrescriptionReport IMPLEMENTS Searchable, Printable
+        ATTRIBUTE: reportID, medicines
+        CONSTRUCTOR(reportID, medicines)
+        METHOD search(query)
+            PRINT "Searching in PrescriptionReport: " + query
+        END METHOD
+        METHOD print()
+            PRINT "Printing PrescriptionReport: " + reportID
+        END METHOD
+    END CLASS
+END

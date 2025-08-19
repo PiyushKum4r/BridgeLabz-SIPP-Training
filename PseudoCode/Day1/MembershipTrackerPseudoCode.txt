@@ -1,0 +1,26 @@
+MEMBERSHIP TRACKER ALGORITHM
+
+START
+
+    Class Member
+        Attributes: name,id,membershipDate
+        Constructor(name,id,membershipDate)
+        Method: displayInfo() -> print attributes 
+        
+        Method: checkMembershipValidity(name,id,membershipDate)
+            
+            If membershipDate + 1 year >= currentDate
+                Print "Membership valid"
+            
+            Else
+                Print "Membership expired"
+
+    
+    Main
+        
+        Create Member objects
+        Call checkValidity() for each object separately
+
+END
+        	
+

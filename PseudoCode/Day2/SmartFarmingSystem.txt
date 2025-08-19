@@ -1,0 +1,37 @@
+ALGORITHM SmartFarmingSystem
+START
+    ABSTRACT CLASS Crop
+        ATTRIBUTE: name
+        CONSTRUCTOR(name)
+        ABSTRACT METHOD waterRequirement()
+        ABSTRACT METHOD harvest()
+    END CLASS
+
+    CLASS Rice EXTENDS Crop
+        CONSTRUCTOR()
+            CALL super("Rice")
+        END CONSTRUCTOR
+
+        METHOD waterRequirement()
+            PRINT "Rice needs high water supply"
+        END METHOD
+
+        METHOD harvest()
+            PRINT "Rice harvested in 120 days"
+        END METHOD
+    END CLASS
+
+    CLASS Wheat EXTENDS Crop
+        CONSTRUCTOR()
+            CALL super("Wheat")
+        END CONSTRUCTOR
+
+        METHOD waterRequirement()
+            PRINT "Wheat needs moderate water supply"
+        END METHOD
+
+        METHOD harvest()
+            PRINT "Wheat harvested in 90 days"
+        END METHOD
+    END CLASS
+END

@@ -1,0 +1,26 @@
+ALGORITHM TrafficSignalSimulation
+START
+    ENUM TrafficLight { RED, GREEN, YELLOW }
+
+    CLASS SignalController
+        ATTRIBUTE: currentLight
+
+        CONSTRUCTOR()
+            SET currentLight = RED
+        END CONSTRUCTOR
+
+        METHOD switchLight()
+            IF currentLight = RED THEN
+                SET currentLight = GREEN
+            ELSE IF currentLight = GREEN THEN
+                SET currentLight = YELLOW
+            ELSE IF currentLight = YELLOW THEN
+                SET currentLight = RED
+            END IF
+        END METHOD
+
+        METHOD displayLight()
+            PRINT "Current Light: " + currentLight
+        END METHOD
+    END CLASS
+END
